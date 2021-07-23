@@ -21,9 +21,7 @@ export default class updateform extends Component {
                 console.log(res.data)
                 this.setState({cname:res.data.carname})
                 this.setState({year:res.data.year})
-                this.setState({version:res.data.version})
-
-             
+                this.setState({version:res.data.version})  
 
                 axios.post('http://localhost:8080/crudapid/webapi/myresource/update',this.state).then((res)=>{
                     if(res){
@@ -38,9 +36,7 @@ export default class updateform extends Component {
               console.log(err)
 
           })
-        
-
-
+    
     }
    
 
