@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import AddCar from './component/addCar'
+import ShowCars from './component/showCars'
+import Update from './component/updateform'
+import  {Switch,Route,BrowserRouter} from 'react-router-dom'
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Switch>
+          <Route exact path="/" component={AddCar}></Route>
+          <Route exact path="/show" component={ShowCars}></Route>
+          <Route exact path="/update/:id" component={Update}></Route>
+         
+      </Switch>
+    </BrowserRouter>
+  
   </React.StrictMode>,
   document.getElementById('root')
 );
